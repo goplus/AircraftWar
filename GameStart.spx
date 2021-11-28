@@ -1,4 +1,4 @@
 onClick => {
 	hide
-	broadcast "battle"
+	broadcast msgBattle
 }

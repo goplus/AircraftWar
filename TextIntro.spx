@@ -1,3 +1,3 @@
-onMsg "battle", => {
+onMsg msgBattle, => {
 	hide
 }

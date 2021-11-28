@@ -20,10 +20,17 @@ const (
 	winscore = 500
 )
 
+const (
+	msgBattle   = "battle"
+	msgYouWin   = "you win"
+	msgGameOver = "game over"
+	msgKillAll  = "kill all"
+)
+
 func addScore(val int) {
 	score += val
 	if score > winscore {
-		broadcast "you win"
+		broadcast msgYouWin
 	}
 }
 

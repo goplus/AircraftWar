@@ -6,14 +6,14 @@ onStart => {
 	life = 1
 }
 
-onMsg "battle", => {
+onMsg msgBattle, => {
 	for life > 0 {
 		wait 0.1
 		Bullet.clone
 	}
 }
 
-onMsg "battle", => {
+onMsg msgBattle, => {
 	show
 	setXYpos 0, 0
 	score = 0
@@ -43,7 +43,7 @@ onMsg "battle", => {
 		setXYpos planeX, planeY
 		if touching("HugeEnemy") || touching("SmallEnemy") || touching("MiddleEnemy") {
 			life--
-			broadcast "game over"
+			broadcast msgGameOver
 			die
 		}
 		if touching("Bomb") {
@@ -55,6 +55,6 @@ onMsg "battle", => {
 onKey KeySpace, => {
 	if bombs > 0 {
 		bombs--
-		broadcast "kill all"
+		broadcast msgKillAll
 	}
 }

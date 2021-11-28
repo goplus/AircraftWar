@@ -1,4 +1,4 @@
-onMsg "game over", => {
+onMsg msgGameOver, => {
 	show
 	wait 2
 	exit

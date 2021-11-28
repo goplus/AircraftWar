@@ -2,7 +2,7 @@ var (
 	life int
 )
 
-onMsg "battle", => {
+onMsg msgBattle, => {
 	for {
 		wait 2
 		clone
@@ -30,7 +30,7 @@ onCloned => {
 	}
 }
 
-onMsg "kill all", => {
+onMsg msgKillAll, => {
 	addScore 10
 	die
 }
