@@ -1,3 +1,3 @@
 go mod tidy
-rm .gop/gop.cache
+rm -f .gop/gop.cache
 gop run .
