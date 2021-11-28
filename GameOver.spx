@@ -1,0 +1,5 @@
+onMsg "game over", => {
+	show
+	wait 2
+	exit
+}
