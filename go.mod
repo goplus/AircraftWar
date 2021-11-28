@@ -1,4 +1,4 @@
-module github.com/xushiwei/HelloSpx
+module github.com/goplus/AircraftWar
 
 go 1.16
 

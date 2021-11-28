@@ -12,5 +12,5 @@ AircraftWar - a game powered by Go+ spx game engine
 - Download Go+ and build it. See https://github.com/goplus/gop#how-to-build.
 - Download this game and run.
   * git clone https://github.com/goplus/AircraftWar.git
-  * cd HelloSpx
+  * cd AircraftWar
   * ./run.sh

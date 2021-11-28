@@ -11,8 +11,9 @@ var (
 	SmallEnemy  SmallEnemy
 	GameOver    GameOver
 	YouWin      YouWin
-	bombs       int
-	score       int
+
+	bombs int
+	score int
 )
 
 const (

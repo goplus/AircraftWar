@@ -1,4 +1,6 @@
-var life int
+var (
+	life int
+)
 
 onStart => {
 	life = 1
