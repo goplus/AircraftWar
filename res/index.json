@@ -49,6 +49,7 @@
     "Bullet",
     "SmallEnemy",
     "YouWin",
-    "GameOver"
+    "GameOver",
+    "Reset"
   ]
 }
