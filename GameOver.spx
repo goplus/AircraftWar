@@ -1,5 +1,8 @@
+onMsg "msgBattle", =>{
+	hide
+}
 onMsg msgGameOver, => {
 	show
-	wait 2
-	exit
+	wait 0.8
+	broadcast "reset game"
 }

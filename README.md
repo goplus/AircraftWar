@@ -14,3 +14,7 @@ AircraftWar - a game powered by Go+ spx game engine
   * git clone https://github.com/goplus/AircraftWar.git
   * cd AircraftWar
   * ./run.sh
+
+- Download GoMobile and build it. See golang.org/x/mobile.
+- Build Mobile
+  * ./buildmobile.sh
