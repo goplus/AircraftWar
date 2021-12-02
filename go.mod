@@ -3,8 +3,8 @@ module github.com/goplus/AircraftWar
 go 1.16
 
 require (
-	github.com/goplus/gop v1.0.25
-	github.com/goplus/spx v1.0.0-beta4
+	github.com/goplus/gop v1.0.32
+	github.com/goplus/spx v1.0.0-beta8
 )
 
 replace (
