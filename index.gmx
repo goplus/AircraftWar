@@ -11,7 +11,7 @@ var (
 	SmallEnemy  SmallEnemy
 	GameOver    GameOver
 	YouWin      YouWin
-
+	Reset   Reset
 	bombs int
 	score int
 )
@@ -32,6 +32,9 @@ func addScore(val int) {
 	if score > winscore {
 		broadcast msgYouWin
 	}
+}
+func reset(){
+	reload "index.json"
 }
 
 run "res", {Title: "Aircraft War (by Go+)"}
