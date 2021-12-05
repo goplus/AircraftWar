@@ -4,7 +4,7 @@ go 1.16
 
 require (
 	github.com/goplus/gop v1.0.32
-	github.com/goplus/spx v1.0.0-beta8
+	github.com/goplus/spx v1.0.0-beta10
 )
 
 replace (

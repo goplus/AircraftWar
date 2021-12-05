@@ -1,20 +1,20 @@
 {
-    "costumes": [
-      {
-        "bitmapResolution": 2,
-        "faceRight": 0,
-        "name": "Reset",
-        "path": "reset2.png",
-        "x":97,
-        "y":35
-      }
-    ],
-    "currentCostumeIndex": 0,
-    "heading": 90,
-    "isDraggable": false,
-    "rotationStyle": "normal",
-    "size": 1.0,
-    "visible": false,
-    "x": 0,
-    "y": 0
-  }
+  "costumes": [
+    {
+      "bitmapResolution": 2,
+      "faceRight": 0,
+      "name": "Reset",
+      "path": "reset2.png",
+      "x":97,
+      "y":35
+    }
+  ],
+  "costumeIndex": 0,
+  "heading": 90,
+  "isDraggable": false,
+  "rotationStyle": "normal",
+  "size": 1.0,
+  "visible": false,
+  "x": 0,
+  "y": 0
+}
