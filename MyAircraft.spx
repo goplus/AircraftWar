@@ -2,11 +2,10 @@ var (
 	life int
 )
 
-onStart => {
-	life = 1
-}
-
 onMsg msgBattle, => {
+	bombs = 0
+	score = 0
+	life = 1
 	for life > 0 {
 		wait 0.1
 		Bullet.clone

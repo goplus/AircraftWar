@@ -13,3 +13,7 @@ onCloned => {
 		}
 	}
 }
+
+onMsg msgGameOver, => {
+	stop OtherScriptsInSprite
+}

@@ -11,7 +11,8 @@ var (
 	SmallEnemy  SmallEnemy
 	GameOver    GameOver
 	YouWin      YouWin
-	Reset   Reset
+	Restart     Restart
+
 	bombs int
 	score int
 )
@@ -22,9 +23,10 @@ const (
 
 const (
 	msgBattle   = "battle"
+	msgKillAll  = "kill all"
 	msgYouWin   = "you win"
 	msgGameOver = "game over"
-	msgKillAll  = "kill all"
+	msgRestart  = "restart"
 )
 
 func addScore(val int) {
@@ -33,8 +35,11 @@ func addScore(val int) {
 		broadcast msgYouWin
 	}
 }
-func reset(){
+
+func restart() {
 	reload "index.json"
+	GameStart.hide
+	broadcast msgBattle
 }
 
-run "res", {Title: "Aircraft War (by Go+)"}
+run "res", {Title: "Aircraft War (by Go+ spx engine)"}

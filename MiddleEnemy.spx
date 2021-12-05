@@ -34,3 +34,7 @@ onMsg msgKillAll, => {
 	addScore 10
 	die
 }
+
+onMsg msgGameOver, => {
+	stop OtherScriptsInSprite
+}

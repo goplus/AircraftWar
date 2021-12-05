@@ -21,3 +21,7 @@ onMsg msgBattle, => {
 		clone
 	}
 }
+
+onMsg msgGameOver, => {
+	stop OtherScriptsInSprite
+}

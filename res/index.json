@@ -49,6 +49,6 @@
     "SmallEnemy",
     "YouWin",
     "GameOver",
-    "Reset"
+    "Restart"
   ]
 }
