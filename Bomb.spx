@@ -25,3 +25,6 @@ onMsg msgBattle, => {
 onMsg msgGameOver, => {
 	stop OtherScriptsInSprite
 }
+onMsg msgYouWin, => {
+	stop OtherScriptsInSprite
+}
