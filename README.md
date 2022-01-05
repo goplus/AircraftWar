@@ -5,7 +5,7 @@ AircraftWar - a game powered by Go+ spx game engine
 [![GitHub release](https://img.shields.io/github/v/tag/goplus/AircraftWar.svg?label=release)](https://github.com/goplus/AircraftWar/releases)
 [![Language](https://img.shields.io/badge/game_engine-spx-green.svg)](https://github.com/goplus/spx)
 
-![Screen Shot](res/AircraftWar.png)
+![Screen Shot](assets/AircraftWar.png)
 
 ### How to run
 
