@@ -57,3 +57,7 @@ onKey KeySpace, => {
 		broadcast msgKillAll
 	}
 }
+onMsg msgYouWin, => {
+	stop OtherScriptsInSprite
+}
+

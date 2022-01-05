@@ -38,3 +38,7 @@ onMsg msgKillAll, => {
 onMsg msgGameOver, => {
 	stop OtherScriptsInSprite
 }
+
+onMsg msgYouWin, => {
+	stop OtherScriptsInSprite
+}

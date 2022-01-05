@@ -1,5 +1,6 @@
 onMsg msgYouWin, => {
 	show
-	wait 2
-	exit
+	wait 0.8
+	broadcast msgRestart
 }
+

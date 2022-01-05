@@ -17,3 +17,6 @@ onCloned => {
 onMsg msgGameOver, => {
 	stop OtherScriptsInSprite
 }
+onMsg msgYouWin, => {
+	stop OtherScriptsInSprite
+}

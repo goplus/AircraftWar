@@ -42,4 +42,4 @@ func restart() {
 	broadcast msgBattle
 }
 
-run "res", {Title: "Aircraft War (by Go+ spx engine)"}
+run "assets", {Title: "Aircraft War (by Go+ spx engine)"}
