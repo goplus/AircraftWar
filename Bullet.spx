@@ -1,5 +1,7 @@
-onTouched => {
-	destroy
+onTouchStart dstSp => {
+	if(dstSp.Name() != "MyAircraft" && dstSp.Name()!= "Backdrop" && dstSp.Name()!= "Bullet"){
+		destroy
+	} 
 }
 
 onCloned => {
