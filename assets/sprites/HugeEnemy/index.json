@@ -67,9 +67,9 @@
   "costumeIndex": 0,
   "fAnimations": {
     "die": {
-      "duration": 0.35,
-      "from": "die-0",
-      "to": "die-6"
+      "frameFps": 20,
+      "frameFrom": "die-0",
+      "frameTo": "die-6"
     }
   },
   "heading": 90,

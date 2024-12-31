@@ -17,6 +17,7 @@
       "color": 15629590,
       "isDiscrete": true,
       "label": "bombs",
+      "name": "bombs",
       "mode": 1,
       "sliderMax": 100,
       "sliderMin": 0,
@@ -24,12 +25,13 @@
       "type": "stageMonitor",
       "val": "getVar:bombs",
       "visible": true,
-      "x": 2,
-      "y": 337
+      "x": -230,
+      "y": -140
     },
     {
       "color": 15629590,
       "isDiscrete": true,
+      "name": "score",
       "label": "score",
       "mode": 1,
       "sliderMax": 100,
@@ -38,8 +40,8 @@
       "type": "stageMonitor",
       "val": "getVar:score",
       "visible": true,
-      "x": 7,
-      "y": 0
+      "x": -230,
+      "y": 170
     },
     "Bomb",
     "MyAircraft",

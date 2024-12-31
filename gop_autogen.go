@@ -15,59 +15,59 @@ const (
 )
 
 type Backdrop struct {
-	spx.Sprite
+	spx.SpriteImpl
 	*Game
 }
 type Bomb struct {
-	spx.Sprite
+	spx.SpriteImpl
 	*Game
 }
 type Bullet struct {
-	spx.Sprite
+	spx.SpriteImpl
 	*Game
 }
 type GameLogo struct {
-	spx.Sprite
+	spx.SpriteImpl
 	*Game
 }
 type GameOver struct {
-	spx.Sprite
+	spx.SpriteImpl
 	*Game
 }
 type GameStart struct {
-	spx.Sprite
+	spx.SpriteImpl
 	*Game
 }
 type HugeEnemy struct {
-	spx.Sprite
+	spx.SpriteImpl
 	*Game
 	life int
 }
 type MiddleEnemy struct {
-	spx.Sprite
+	spx.SpriteImpl
 	*Game
 	life int
 }
 type MyAircraft struct {
-	spx.Sprite
+	spx.SpriteImpl
 	*Game
 	life int
 }
 type Restart struct {
-	spx.Sprite
+	spx.SpriteImpl
 	*Game
 }
 type SmallEnemy struct {
-	spx.Sprite
+	spx.SpriteImpl
 	*Game
 	life int
 }
 type TextIntro struct {
-	spx.Sprite
+	spx.SpriteImpl
 	*Game
 }
 type YouWin struct {
-	spx.Sprite
+	spx.SpriteImpl
 	*Game
 }
 type Game struct {
@@ -120,7 +120,7 @@ func (this *Backdrop) Main() {
 //line Bomb.spx:1
 func (this *Bomb) Main() {
 //line Bomb.spx:1:1
-	this.OnTouched__1(func() {
+	this.OnTouchStart__1(func() {
 //line Bomb.spx:2:1
 		this.Destroy()
 	})
@@ -158,7 +158,7 @@ func (this *Bomb) Main() {
 //line Bomb.spx:20:1
 			this.Wait(20)
 //line Bomb.spx:21:1
-			spx.Gopt_Sprite_Clone__0(this)
+			spx.Gopt_SpriteImpl_Clone__0(this)
 		}
 	})
 //line Bomb.spx:25:1
@@ -178,9 +178,9 @@ func (this *Bomb) Classfname() string {
 //line Bullet.spx:1
 func (this *Bullet) Main() {
 //line Bullet.spx:1:1
-	this.OnTouched__1(func() {
+	this.OnTouchStart__5([]string{"HugeEnemy", "MiddleEnemy", "SmallEnemy"}, func() {
 //line Bullet.spx:2:1
-		this.Destroy()
+		this.DeleteThisClone()
 	})
 //line Bullet.spx:5:1
 	this.OnCloned__1(func() {
@@ -196,7 +196,7 @@ func (this *Bullet) Main() {
 //line Bullet.spx:10:1
 			this.Wait(0.04)
 //line Bullet.spx:11:1
-			if this.Touching(spx.Edge) {
+			if this.Touching__2(spx.Edge) {
 //line Bullet.spx:12:1
 				this.Destroy()
 			}
@@ -270,7 +270,7 @@ func (this *HugeEnemy) Main() {
 //line HugeEnemy.spx:7:1
 			this.Wait(25)
 //line HugeEnemy.spx:8:1
-			spx.Gopt_Sprite_Clone__0(this)
+			spx.Gopt_SpriteImpl_Clone__0(this)
 		}
 	})
 //line HugeEnemy.spx:12:1
@@ -278,7 +278,7 @@ func (this *HugeEnemy) Main() {
 //line HugeEnemy.spx:13:1
 		this.life = 50
 //line HugeEnemy.spx:14:1
-		this.SetCostume(0)
+		this.SetCostume__1(0)
 //line HugeEnemy.spx:15:1
 		this.SetXYpos(spx.Rand__0(-110, 110), 237)
 //line HugeEnemy.spx:16:1
@@ -294,7 +294,7 @@ func (this *HugeEnemy) Main() {
 				this.Destroy()
 			}
 //line HugeEnemy.spx:22:1
-			if this.Touching("Bullet") {
+			if this.Touching__0("Bullet") {
 //line HugeEnemy.spx:23:1
 				this.life--
 //line HugeEnemy.spx:24:1
@@ -340,7 +340,7 @@ func (this *MiddleEnemy) Main() {
 //line MiddleEnemy.spx:7:1
 			this.Wait(2)
 //line MiddleEnemy.spx:8:1
-			spx.Gopt_Sprite_Clone__0(this)
+			spx.Gopt_SpriteImpl_Clone__0(this)
 		}
 	})
 //line MiddleEnemy.spx:12:1
@@ -348,7 +348,7 @@ func (this *MiddleEnemy) Main() {
 //line MiddleEnemy.spx:13:1
 		this.life = 8
 //line MiddleEnemy.spx:14:1
-		this.SetCostume(0)
+		this.SetCostume__1(0)
 //line MiddleEnemy.spx:15:1
 		this.SetXYpos(spx.Rand__0(-131, 131), 237)
 //line MiddleEnemy.spx:16:1
@@ -364,7 +364,7 @@ func (this *MiddleEnemy) Main() {
 				this.Destroy()
 			}
 //line MiddleEnemy.spx:22:1
-			if this.Touching("Bullet") {
+			if this.Touching__0("Bullet") {
 //line MiddleEnemy.spx:23:1
 				this.life--
 //line MiddleEnemy.spx:24:1
@@ -416,7 +416,7 @@ func (this *MyAircraft) Main() {
 //line MyAircraft.spx:10:1
 			this.Wait(0.1)
 //line MyAircraft.spx:11:1
-			spx.Gopt_Sprite_Clone__0(&this.Bullet)
+			spx.Gopt_SpriteImpl_Clone__0(&this.Bullet)
 		}
 	})
 //line MyAircraft.spx:15:1
@@ -433,7 +433,7 @@ func (this *MyAircraft) Main() {
 //line MyAircraft.spx:20:1
 			this.Wait(0.01)
 //line MyAircraft.spx:21:1
-			dis := this.DistanceTo(spx.Mouse)
+			dis := this.DistanceTo__2(spx.Mouse)
 //line MyAircraft.spx:22:1
 			xx := this.Xpos()
 //line MyAircraft.spx:23:1
@@ -474,7 +474,7 @@ func (this *MyAircraft) Main() {
 //line MyAircraft.spx:42:1
 			this.SetXYpos(planeX, planeY)
 //line MyAircraft.spx:43:1
-			if this.Touching("HugeEnemy") || this.Touching("SmallEnemy") || this.Touching("MiddleEnemy") {
+			if this.Touching__0("HugeEnemy") || this.Touching__0("SmallEnemy") || this.Touching__0("MiddleEnemy") {
 //line MyAircraft.spx:44:1
 				this.life--
 //line MyAircraft.spx:45:1
@@ -483,7 +483,7 @@ func (this *MyAircraft) Main() {
 				this.Die()
 			}
 //line MyAircraft.spx:48:1
-			if this.Touching("Bomb") {
+			if this.Touching__0("Bomb") {
 //line MyAircraft.spx:49:1
 				this.bombs++
 			}
@@ -522,7 +522,7 @@ func (this *Restart) Main() {
 		for {
 			spx.Sched()
 //line Restart.spx:6:1
-			if this.Touching(spx.Mouse) {
+			if this.Touching__2(spx.Mouse) {
 //line Restart.spx:7:1
 				this.SetYpos(-90)
 			} else {
@@ -556,7 +556,7 @@ func (this *SmallEnemy) Main() {
 //line SmallEnemy.spx:7:1
 			this.Wait(1)
 //line SmallEnemy.spx:8:1
-			spx.Gopt_Sprite_Clone__0(this)
+			spx.Gopt_SpriteImpl_Clone__0(this)
 		}
 	})
 //line SmallEnemy.spx:12:1
@@ -564,7 +564,7 @@ func (this *SmallEnemy) Main() {
 //line SmallEnemy.spx:13:1
 		this.life = 1
 //line SmallEnemy.spx:14:1
-		this.SetCostume(0)
+		this.SetCostume__1(0)
 //line SmallEnemy.spx:15:1
 		this.SetXYpos(spx.Rand__0(-131, 131), 237)
 //line SmallEnemy.spx:16:1
@@ -580,7 +580,7 @@ func (this *SmallEnemy) Main() {
 				this.Destroy()
 			}
 //line SmallEnemy.spx:22:1
-			if this.Touching("Bullet") {
+			if this.Touching__0("Bullet") {
 //line SmallEnemy.spx:23:1
 				this.life--
 //line SmallEnemy.spx:24:1

@@ -1,5 +1,5 @@
-onTouched => {
-	destroy
+onTouchStart ["HugeEnemy","MiddleEnemy","SmallEnemy"], => {
+	deleteThisClone
 }
 
 onCloned => {
